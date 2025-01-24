@@ -13,7 +13,9 @@
                             </RouterLink>
 
                             <!-- Add Links Below -->
-                                            
+                            <RouterLink class="route" to="/game">
+                                <VBtn class="text-subtitle-2" density="compact" color="primary" :variant="(route.name == 'Game')? 'tonal':'text'">Game</VBtn> 
+                            </RouterLink>                
 
                         </VCol>
                         <VCol cols="1" align="right">
@@ -76,5 +78,4 @@
         margin-left: 8px;
         margin-right: 8px; 
     }
-  </style>
-  
+  </style>     
