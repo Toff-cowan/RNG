@@ -14,7 +14,7 @@
 
                             <!-- Add Links Below -->
                             <RouterLink class="route" to="/Intro">
-                                <VBtn class="text-subtitle-2" density="compact" color="primary" :variant="(route.name == 'Intro')? 'tonal':'text'">Game</VBtn> 
+                                <VBtn class="text-subtitle-2" density="compact" color="primary" :variant="(route.name == 'Intro')? 'tonal':'text'">Intro</VBtn> 
                             </RouterLink>                
 
                         </VCol>
