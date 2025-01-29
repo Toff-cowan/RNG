@@ -21,11 +21,16 @@ const route       = useRoute();
 // FUNCTIONS
 onMounted(()=>{
     // THIS FUNCTION IS CALLED AFTER THIS COMPONENT HAS BEEN MOUNTED
+  mqttStore.subscribe("esp32/randomNumber");
+  mqttStore.subscribe("esp32/ledState");
+  mqttStore.setMessageHandler(handleMQTTMessage);
 });
 
 
 onBeforeUnmount(()=>{
     // THIS FUNCTION IS CALLED RIGHT BEFORE THIS COMPONENT IS UNMOUNTED
+    mqttStore.unsubscribe("esp32/randomNumber");
+    mqttStore.unsubscribe("esp32/ledState");
 });
 
 
@@ -35,6 +40,9 @@ onBeforeUnmount(()=>{
 <style scoped>
 /** CSS STYLE HERE */
 
+.v-card {
+    text-align: center;
+}
 
 </style>
    
