@@ -13,8 +13,8 @@
                             </RouterLink>
 
                             <!-- Add Links Below -->
-                            <RouterLink class="route" to="/game">
-                                <VBtn class="text-subtitle-2" density="compact" color="primary" :variant="(route.name == 'Game')? 'tonal':'text'">Game</VBtn> 
+                            <RouterLink class="route" to="/Intro">
+                                <VBtn class="text-subtitle-2" density="compact" color="primary" :variant="(route.name == 'Intro')? 'tonal':'text'">Game</VBtn> 
                             </RouterLink>                
 
                         </VCol>
