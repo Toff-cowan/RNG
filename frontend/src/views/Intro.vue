@@ -11,7 +11,7 @@
             </v-card-item>
             <v-card-item>
               <v-btn class="text-caption" text="Toggle" variant="tonal" color="primary" density="compact"
-                @click="toggle('LED_A')"></v-btn>
+                @click="toggle('LED A')"></v-btn>
             </v-card-item>
           </v-card>
   
@@ -26,7 +26,7 @@
             </v-card-item>
             <v-card-item>
               <v-btn class="text-caption" text="Toggle" variant="tonal" color="primary" density="compact"
-                @click="toggle('LED_B')"></v-btn>
+                @click="toggle('LED B')"></v-btn>
             </v-card-item>
           </v-card>
         </v-col>
