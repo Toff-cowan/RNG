@@ -55,8 +55,8 @@
 /** JAVASCRIPT HERE */
 
 // IMPORTS
-import { ref,reactive,watch ,onMounted,onBeforeUnmount,computed } from "vue";  
-import { useRoute ,useRouter } from "vue-router";
+//import { ref,reactive,watch ,onMounted,onBeforeUnmount,computed } from "vue";  
+//import { useRoute ,useRouter } from "vue-router";
 import { useMqttStore } from '@/store/mqttStore'; // Import Mqtt Store
 import { storeToRefs } from "pinia";
  
