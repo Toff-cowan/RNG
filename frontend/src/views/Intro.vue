@@ -53,6 +53,10 @@
 
 <script setup>
 /** JAVASCRIPT HERE */
+const toggle = (name) => {
+  let message = JSON.stringify({ "type": "toggle", "device": name }); // Create message and convert to a json string
+  Mqtt.publish("620164419_sub", message); // Publish message to appropriate topic
+}
 
 // IMPORTS
 import { ref,reactive,watch ,onMounted,onBeforeUnmount,computed } from "vue";  
@@ -70,8 +74,8 @@ onMounted(()=>{
     Mqtt.connect();
     setTimeout( ()=>{
     // Subscribe to each topic
+    Mqtt.subscribe("620164419");
     Mqtt.subscribe("620164419_sub");
-    Mqtt.subscribe("elet2415");
         },3000);
 });
 
