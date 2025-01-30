@@ -155,6 +155,7 @@ void vButtonCheck( void * pvParameters )  {
         // then execute appropriate function if a button is pressed
           if(digitalRead(BTN_A) == LOW) {
             GDP();
+            delay(500); // debouncing button, 0.5s delay
 
           }
         //Check if button B is pressed
