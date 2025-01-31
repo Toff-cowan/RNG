@@ -6,12 +6,12 @@
           <v-card title="LED A" width="150" density="compact" border flat rounded="md">
             <v-divider></v-divider>
             <v-card-item>
-              <v-icon v-if="payload.led_A == 0" size="50" icon="mdi:mdi-lightbulb"></v-icon>
-              <v-icon v-if="payload.led_A == 1" size="50" icon="mdi:mdi-lightbulb-on" color="yellow"></v-icon>
+              <v-icon v-if="payload.ledA == 0" size="50" icon="mdi:mdi-lightbulb"></v-icon>
+              <v-icon v-if="payload.ledA == 1" size="50" icon="mdi:mdi-lightbulb-on" color="yellow" ></v-icon>
             </v-card-item>
             <v-card-item>
               <v-btn class="text-caption" text="Toggle" variant="tonal" color="primary" density="compact"
-                @click="toggle('LED_A')"></v-btn>
+                @click="toggle('LED A')"></v-btn>
             </v-card-item>
           </v-card>
   
@@ -21,12 +21,12 @@
           <v-card title="LED B" width="150" density="compact" border flat rounded="md">
             <v-divider></v-divider>
             <v-card-item>
-              <v-icon v-if="payload.led_B == 0" size="50" icon="mdi:mdi-lightbulb"></v-icon>
-              <v-icon v-if="payload.led_B == 1" size="50" icon="mdi:mdi-lightbulb-on" color="yellow"></v-icon>
+              <v-icon v-if="payload.ledB == 0" size="50" icon="mdi:mdi-lightbulb"></v-icon>
+              <v-icon v-if="payload.ledB == 1" size="50" icon="mdi:mdi-lightbulb-on" color="yellow"></v-icon>
             </v-card-item>
             <v-card-item>
               <v-btn class="text-caption" text="Toggle" variant="tonal" color="primary" density="compact"
-                @click="toggle('LED_B')"></v-btn>
+                @click="toggle('LED B')"></v-btn>
             </v-card-item>
           </v-card>
         </v-col>
@@ -76,6 +76,7 @@ onMounted(()=>{
     // Subscribe to each topic
     Mqtt.subscribe("620164419");
     Mqtt.subscribe("620164419_sub");
+    Mqtt.subscribe("topic");
   },3000);
 });
 

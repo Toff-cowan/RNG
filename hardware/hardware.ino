@@ -53,12 +53,12 @@
 // MQTT CLIENT CONFIG  
 static const char* pubtopic       = "620164419";                    // Add your ID number here
 static const char* subtopic[]     = {"620164419_sub","/elet2415"};  // Array of Topics(Strings) to subscribe to
-static const char* mqtt_server    = "www.yanacreations.com";                // Broker IP address or Domain name as a String 
+static const char* mqtt_server    = "broker.emqx.io";                // Broker IP address or Domain name as a String 
 static uint16_t mqtt_port         = 1883;
 
 // WIFI CREDENTIALS
-const char* ssid                  = "MonaConnect"; // Add your Wi-Fi ssid
-const char* password              = ""; // Add your Wi-Fi password 
+const char* ssid                  = "Toff"; // Add your Wi-Fi ssid
+const char* password              = "Chr1st0f.f"; // Add your Wi-Fi password 
 
 
 
@@ -180,6 +180,10 @@ void vUpdate( void * pvParameters )  {
 
           // Add key:value pairs to JSon object
           doc["id"]         = "620164419";
+          doc["timestamp"]  = getTimeStamp();
+          doc["number"]     = number;
+          doc["ledA"]       = getLEDStatus(LED_A);
+          doc["ledB"]      = getLEDStatus(LED_B);
 
           serializeJson(doc, message);  // Seralize / Covert JSon object to JSon string and store in char* array
 
