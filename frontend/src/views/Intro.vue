@@ -83,7 +83,7 @@ onMounted(()=>{
 
 onBeforeUnmount(()=>{
     // THIS FUNCTION IS CALLED RIGHT BEFORE THIS COMPONENT IS UNMOUNTED
-    Mqtt.unsubscribeAll();
+    Mqtt.unsubcribeAll();
 });
 
 
